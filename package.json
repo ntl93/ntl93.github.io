@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-lumen",
-  "version": "1.6.273",
-  "description": "A constantly evolving and thoughtful architecture for creating static blogs with Gatsby",
+  "name": "ntl93-blog",
+  "version": "1.0.0",
+  "description": "A simple blog with Gatsby template",
   "keywords": [
     "gatsby",
     "graphql",
@@ -10,12 +10,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/alxshelepenok/gatsby-starter-lumen.git"
+    "url": "https://github.com/ntl93/ntl93.github.io.git"
   },
   "license": "MIT",
   "author": "Alexander Shelepenok <alxshelepenok@gmail.com>",
   "scripts": {
     "build": "npm run clean && gatsby build",
+    "deploy": "gatsby build && gh-pages -d public",
+    "predeploy": "gatsby build",
     "clean": "rimraf .cache public",
     "format": "npm run format:ts && npm run format:scss",
     "format:scss": "stylelint \"src/**/*.scss\" --fix",
@@ -120,6 +122,7 @@
     "eslint-plugin-react": "^7.36.1",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-simple-import-sort": "^12.1.1",
+    "gh-pages": "^6.1.1",
     "husky": "8.0.3",
     "identity-obj-proxy": "3.0.0",
     "jest": "^29.6.4",
